@@ -81,6 +81,6 @@ express()
 
       
       console.log(obj);
-      res.render('Pages/index.ejs', obj);
+      res.render('pages/index.ejs', obj);
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
