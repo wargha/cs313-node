@@ -1,0 +1,22 @@
+{
+  "name": "cs313-node",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000c\u0000s\u00003\u00001\u00003\u0000-\u0000n\u0000o\u0000d\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwargha/cs313-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lwargha/cs313-node/issues"
+  },
+  "homepage": "https://github.com/lwargha/cs313-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
