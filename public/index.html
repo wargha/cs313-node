@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>aee </title>
+    <title>Document</title>
 </head>
 <body>
-    ae to aqui loco!
+  <h3>Postage Details</h3>
+    <form action="/mail" method="GET">
+        <input type="number" name="weight" id="" placeholder="Weight of the item: ">
+        <select name="mail_type" id="">
+          <option selected disabled readonly="" value="">Select Mail Type</option>
+          <option value="Letter Stamped">Letter(stamped)</option>
+          <option value="Letter Mettered">Letter(mettered)</option>
+          <option value="Flats">Large Envelopes (flats) </option>
+          <option value="First-Class Package Service—Retail">First-Class Package Service—Retail</option>
+        </select>
+        <button type="submit">
+            Submit
+        </button>
+      </form>
 </body>
 </html>
+
+
