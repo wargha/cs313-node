@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lwargha/cs313-node#readme",
   "dependencies": {
     "ejs": "^2.7.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^7.13.0"
   }
 }
