@@ -1,7 +1,14 @@
-CREATE TABLE person
+DROP TABLE USERS;
+
+CREATE TABLE USERS
 (
 	id SERIAL PRIMARY KEY NOT NULL,
 	first_name VARCHAR(100) NOT NULL,
 	last_name VARCHAR(100),
-	birthdate date
+	username VARCHAR (100) NOT NULL,
+	pw VARCHAR (255) NOT NULL
 );
+
+
+INSERT INTO USERS (first_name, last_name, username, pw)
+VALUES ('Lucas', 'Wargha','wargha', '1234');

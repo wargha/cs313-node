@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lwargha/cs313-node#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^2.7.2",
     "express": "^4.17.1",
     "pg": "^7.13.0"

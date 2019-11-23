@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <% include ../partials/header.ejs %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <title>Document</title>
 </head>
 
 <body>
+  <div class="cont">
+    <div class="demo">
+      <div class="login">
+        <div class="login__check"></div>
+        <div class="login__form">
+          <div class="login__row">
+            <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+              <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+            </svg>
+            <input type="text" class="login__input name" placeholder="Username" />
+          </div>
+          <div class="login__row">
+            <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+              <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+            </svg>
+            <input type="password" class="login__input pass" placeholder="Password" />
+          </div>
+          <button type="button" class="login__submit">Sign in</button>
+          <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p>
+        </div>
+      </div>
+      <div class="app">
+        <div class="app__top">
+          <p class="app__hello">Good Afternoon, Lucas! You will be redirected
+            to your favorite bucket list page.
+          </p>
+          <div class="app__user">
 
-  <% include ../partials/nav.ejs %>
-  
- <h2>Pricing for the mail</h2> <br>
- <span>Mail Type: <%= type %></span> <br>
- <span>Mail Weight: <%= weight %></span> <br>
- <span>Final Price: <%= price %></span> <br>
+          </div>
+        </div>
+      </div>
+      <div class="app__logout">
+        <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+          <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./scripts/login.js"></script>
 </body>
+
 </html>
