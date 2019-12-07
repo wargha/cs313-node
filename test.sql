@@ -22,4 +22,4 @@ CREATE TABLE bucket
 );
 
 INSERT INTO bucket (bucket_name, bucket_owner)
-VALUES ("Visit Japan", 1);
+VALUES ('Visit Japan', 1);

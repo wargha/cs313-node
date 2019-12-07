@@ -28,11 +28,15 @@ express()
 
     .post('/tryLogin', login.getUser)
 
-    .post('/signup', login.signUp )
+    .post('/signup', login.signUp)
 
-    .get('/bucketList', (req, res) => { 
-        res.render("pages/index", {id: req.query.id});
-    })
+    .get('/bucketList', bucket.renderBucket)
+
+    .post('/getList', bucket.getUserList)
+
+    .post('/removeItem', bucket.removeItem)
+
+    .post('/addItem', bucket.addItem)
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 

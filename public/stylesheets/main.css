@@ -525,10 +525,12 @@ a {
       .container-all .bucket .single-item h4 {
         font-size: 30px;
         margin: 0;
-        margin-right: 30px; }
+        margin-right: 30px;
+        width: 30px; }
       .container-all .bucket .single-item p {
         font-size: 20px;
-        margin: auto 0; }
+        margin: auto 0;
+        width: 150px; }
       .container-all .bucket .single-item .button {
         margin-left: 40px;
         font-size: 16px;
@@ -540,7 +542,33 @@ a {
         color: white; }
         .container-all .bucket .single-item .button span {
           margin: auto; }
+      .container-all .bucket .single-item .button:hover {
+        cursor: pointer;
+        opacity: 0.7; }
       .container-all .bucket .single-item .edit {
-        background: rgba(70, 100, 49, 0.967); }
+        background: rgba(49, 80, 100, 0.967); }
+  .container-all .add-item {
+    width: 40vw;
+    max-width: 600px;
+    justify-content: center;
+    margin: 0 auto; }
+    .container-all .add-item input {
+      text-indent: 1rem;
+      border-radius: 20px;
+      height: 3.2rem; }
+    .container-all .add-item .button {
+      margin-left: 40px;
+      font-size: 16px;
+      width: 120px;
+      background: rgba(70, 100, 49, 0.967);
+      border-radius: 21px;
+      display: flex;
+      justify-content: center;
+      color: white; }
+      .container-all .add-item .button span {
+        margin: auto; }
+    .container-all .add-item .button:hover {
+      cursor: pointer;
+      opacity: 0.7; }
 
 /*# sourceMappingURL=main.css.map */

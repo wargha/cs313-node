@@ -12,29 +12,15 @@
 <body onload="loadBucket()">
   <div class="container-all container col">
     <header></header>
-    <h2 id ="get-id" class="hide"><%= id %></h2>
+    <h2 id="get-id" class="hide"><%= id %></h2>
     <h3>Behold, your bucket list: </h3>
-    <div class="container col bucket">
-      <div class="container row single-item">
-        <h4>1</h4>
-        <p>Visit Australia</p>
-        <div class="button remove">
-          <span> Remove </span>
+    <div id="fill-list" class="container col bucket">
+    </div>
+    <div class="container add-item">
+      <input id="item-to-add" type="text" placeholder="Add New Item">
+      <div onclick="addItem()" class="button add">
+          <span> Add Item </span>
         </div>
-        <div class="button edit">
-          <span> Edit </span>
-        </div>
-      </div>
-      <div class="container row single-item">
-        <h4>1</h4>
-        <p>Visit Australia</p>
-        <div class="button remove">
-          <span> Remove </span>
-        </div>
-        <div class="button edit">
-          <span> Edit </span>
-        </div>
-      </div>
     </div>
   </div>
 
