@@ -20,7 +20,7 @@ express()
 
     .use(bodyParser.json())
 
-    .set('views', __dirname + '\\views')
+    .set('views', __dirname + '\\views\\pages')
 
     .set('view engine', 'ejs')
 
