@@ -1,4 +1,4 @@
-// process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 const express = require('express');
 const path = require('path');
@@ -31,7 +31,7 @@ express()
     .post('/signup', login.signUp )
 
     .get('/bucketList', (req, res) => { 
-        res.render("index", {id: req.query.id});
+        res.render("index.ejs", {id: req.query.id});
     })
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
