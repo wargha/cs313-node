@@ -20,7 +20,7 @@ express()
 
     .use(bodyParser.json())
 
-    .set('views', __dirname + '\\views\\pages')
+    .set('views', __dirname + '/views')
 
     .set('view engine', 'ejs')
 
@@ -31,7 +31,7 @@ express()
     .post('/signup', login.signUp )
 
     .get('/bucketList', (req, res) => { 
-        res.render("index", {id: req.query.id});
+        res.render("pages/index", {id: req.query.id});
     })
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));

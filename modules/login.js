@@ -9,7 +9,7 @@ connectionString: connectionString
 
 
 function renderLogin(req,res) { 
-    res.render("login");
+    res.render("pages/login");
 } 
 
 function signUpSubmit(req, res)  {
