@@ -12,3 +12,14 @@ CREATE TABLE USERS
 
 INSERT INTO USERS (first_name, last_name, username, pw)
 VALUES ('Lucas', 'Wargha','wargha', '1234');
+
+
+CREATE TABLE bucket
+(
+	id SERIAL PRIMARY KEY NOT NULL,
+	bucket_name VARCHAR(100) NOT NULL,
+	bucket_owner INT NOT NULL REFERENCES users(id)
+);
+
+INSERT INTO bucket (bucket_name, bucket_owner)
+VALUES ("Visit Japan", 1);

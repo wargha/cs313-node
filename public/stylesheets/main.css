@@ -1,14 +1,26 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
-html, body {
+.hide {
+  display: none; }
+
+html,
+body {
   font-size: 62.5%;
   height: 100%;
   overflow: hidden; }
+  html .hover,
+  body .hover {
+    cursor: pointer;
+    opacity: 0.85;
+    color: red; }
   @media (max-width: 768px) {
-    html, body {
+    html,
+    body {
       font-size: 50%; } }
 
 svg {
@@ -24,7 +36,8 @@ svg {
     fill: none;
     stroke-width: 1; }
 
-input, button {
+input,
+button {
   outline: none;
   border: none; }
 
@@ -48,10 +61,12 @@ input, button {
 
 .login {
   position: relative;
-  height: 100%;
+  height: 500px;
   background: linear-gradient(to bottom, rgba(146, 135, 187, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
   transition: opacity 0.1s, transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
   transform: scale(1); }
+  .login img {
+    margin-top: 100px; }
   .login.inactive {
     opacity: 0;
     transform: scale(1.1); }
@@ -77,7 +92,6 @@ input, button {
       box-shadow: inset -0.2rem -2rem 2rem rgba(0, 0, 0, 0.2); }
   .login__form {
     position: absolute;
-    top: 50%;
     left: 0;
     width: 100%;
     height: 50%;
@@ -110,7 +124,7 @@ input, button {
     position: relative;
     width: 100%;
     height: 4rem;
-    margin: 5rem 0 2.2rem;
+    margin: 5rem 0 .5rem;
     color: rgba(255, 255, 255, 0.8);
     background: #FF3366;
     font-size: 1.5rem;
@@ -147,12 +161,47 @@ input, button {
         transition: opacity 0.1s 0s;
         opacity: 0;
         animation: none; }
-  .login__signup {
-    font-size: 1.2rem;
-    color: #ABA8AE; }
-    .login__signup a {
-      color: #fff;
-      cursor: pointer; }
+  .login .signup_submit {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    margin: .5rem 0 2.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    background: #50D2C2;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.3s 0.15s, font-size 0.1s 0.15s; }
+    .login .signup_submit:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -1.5rem;
+      margin-top: -1.5rem;
+      width: 3rem;
+      height: 3rem;
+      border: 2px dotted #fff;
+      border-radius: 50%;
+      border-left: none;
+      border-bottom: none;
+      transition: opacity 0.1s 0.4s;
+      opacity: 0; }
+    .login .signup_submit.processing {
+      width: 4rem;
+      font-size: 0; }
+      .login .signup_submit.processing:after {
+        opacity: 1;
+        animation: rotate 0.5s 0.4s infinite linear; }
+    .login .signup_submit.success {
+      transition: transform 0.3s 0.1s ease-out, opacity 0.1s 0.3s, background-color 0.1s 0.3s;
+      transform: scale(30);
+      opacity: 0.9; }
+      .login .signup_submit.success:after {
+        transition: opacity 0.1s 0s;
+        opacity: 0;
+        animation: none; }
 
 .app {
   position: absolute;
@@ -176,7 +225,6 @@ input, button {
       transform: scale(1); }
   .app__top {
     position: relative;
-    height: 28rem;
     background: rgba(0, 0, 0, 0.5);
     padding: 6rem 1.5rem 2rem;
     text-align: center; }
@@ -212,6 +260,39 @@ input, button {
     color: #fff;
     font-weight: normal;
     margin-bottom: 3rem; }
+  .app #info-retrieve {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 2rem; }
+  .app #signup-tag {
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 2rem; }
+  .app .signup-input {
+    margin-bottom: 1.5rem;
+    text-indent: 1.5rem;
+    color: black;
+    height: 2.5rem;
+    border-radius: 10px; }
+  .app .submit-signup {
+    margin-bottom: 1.5rem;
+    text-indent: .5rem;
+    color: black;
+    height: 2.5rem;
+    border-radius: 10px;
+    height: 3rem;
+    width: 14rem;
+    margin: 1rem auto .5rem;
+    color: rgba(255, 255, 255, 0.8);
+    background: #FF3366;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    transition: width 0.3s 0.15s, font-size 0.1s 0.15s; }
   .app__user {
     position: relative;
     display: inline-block;
@@ -364,5 +445,102 @@ input, button {
 @keyframes animatePath {
   to {
     stroke-dashoffset: 0; } }
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+@-ms-viewport {
+  width: device-width; }
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+.grid {
+  display: grid; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f6f7; }
+
+:root {
+  --bg-dark: #1c2730;
+  --dark-texter: #303d46; }
+
+.dark-text {
+  color: var(--dark-texter); }
+
+.container {
+  display: flex; }
+
+.row {
+  flex-flow: row; }
+
+.col {
+  flex-flow: column; }
+
+.center {
+  justify-content: center; }
+
+.hover:hover {
+  cursor: pointer; }
+
+.bold {
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.hide {
+  display: none; }
+
+.container-all {
+  background: url("../../assets/bg.jpg") center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white; }
+  .container-all header {
+    width: 100vw;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.459);
+    background-size: cover; }
+  .container-all h3 {
+    font-size: 50px;
+    text-align: center; }
+  .container-all .bucket {
+    width: 40vw;
+    max-width: 600px;
+    justify-content: center;
+    margin: 70px auto;
+    border: 1px solid #303d46; }
+    .container-all .bucket .single-item {
+      width: 100%;
+      margin-bottom: 15px; }
+      .container-all .bucket .single-item h4 {
+        font-size: 30px;
+        margin: 0;
+        margin-right: 30px; }
+      .container-all .bucket .single-item p {
+        font-size: 20px;
+        margin: auto 0; }
+      .container-all .bucket .single-item .button {
+        margin-left: 40px;
+        font-size: 16px;
+        width: 120px;
+        background: #cc2121;
+        border-radius: 21px;
+        display: flex;
+        justify-content: center;
+        color: white; }
+        .container-all .bucket .single-item .button span {
+          margin: auto; }
+      .container-all .bucket .single-item .edit {
+        background: rgba(70, 100, 49, 0.967); }
 
 /*# sourceMappingURL=main.css.map */

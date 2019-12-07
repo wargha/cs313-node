@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./stylesheets/main.css">
-  <title>Document</title>
+  <title>Your Bucket List</title>
 </head>
 
 <body>
   <div id="login" class="cont">
     <div class="demo">
       <div class="login">
-        <div class="login__check"></div>
+        <img src="./assets/logo.png" alt="">
         <div class="login__form">
           <div class="login__row">
             <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
@@ -28,16 +28,21 @@
             <input id="user-pw" type="password" class="login__input pass" placeholder="Password" />
           </div>
           <button type="button" class="login__submit">Sign in</button>
-          <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p>
+          <button type="button" class="signup_submit">Sign up</button>
         </div>
       </div>
       <div class="app">
-        <div class="app__top">
-          <p id="welcome-name" class="app__hello">Hello, Lucas.</p>
-          <p class="app__retrieving-info">We are retrieving your bucket list. Please wait.</p>
-          <div class="app__user">
-
-          </div>
+        <div id="insert-form-signup" class="app__top">
+          <h3 id="signup-tag">Sign Up</h3>
+          <h4 id="info-retrieve" class="hide">Retrieving bucketlist  async just for you :)... 
+            You will be redirected soon.
+          </h4>
+          <input id="fname" class="signup-input" type="text" value="" placeholder="First Name">
+          <input id="lname" class="signup-input" type="text" value="" placeholder="Last Name">
+          <input id="uname" class="signup-input" type="text" value="" placeholder="Username">
+          <input id="pw-signup" class="signup-input" type="password" value="" placeholder="Password">
+          <br>
+          <input class="submit-signup signup-input" type="submit"></input>
         </div>
       </div>
       <div class="app__logout">
