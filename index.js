@@ -16,11 +16,11 @@ var login = require('./modules/login.js');
 var bucket = require('./modules/bucketList.js');
 
 express()
-    .use(express.static("public"))
+    .use(express.static(__dirname + '/public'))
 
     .use(bodyParser.json())
 
-    .set("views", ".\\views\\pages")
+    .set('views', __dirname + '\\views')
 
     .set('view engine', 'ejs')
 
