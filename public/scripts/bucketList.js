@@ -24,9 +24,6 @@ function loadBucket() {
                     <div onclick="removeItem(${item.id})" class="button remove">
                       <span> Remove </span>
                     </div>
-                    <div onclick="editItem(${item.id})" class="button edit">
-                      <span> Edit </span>
-                    </div>
                   </div>
                 `)
             })
@@ -35,6 +32,9 @@ function loadBucket() {
     })
 }
 
+          // <div onclick="editItem(${item.id}, this)" class="button edit">
+                    //   <span> Edit </span>
+                    // </div>
 function removeItem(id) { 
     console.log(id);
 
@@ -72,6 +72,30 @@ function addItem() {
     
     response.then(async (res) => { 
       loadBucket();
+      document.getElementById('item-to-add').value = '';
     })
 
 }
+
+// function editItem(itemId, el) { 
+//    el.removeChild(el)
+// }
+
+// function sendUpdateItem(itemid) { 
+//     console.log('here');
+//     var response = fetch(`/editItem`, {
+//         method: 'PUT',
+//         body: JSON.stringify({
+//             id: itemId
+//         }),
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json'
+//         }
+//     });
+    
+//     response.then(async (res) => { 
+//       loadBucket();
+//     //   document.getElementById('item-to-add').value = '';
+//     })
+// }

@@ -61,9 +61,27 @@ function addItem(req, res) {
     })
 }
 
+function updateItem(req, res) { 
+    var id = req.body.id;
+    var content = req.body.content;
+    console.log(id);
+    console.log(content);
+    pool.query(`UPDATE bucket SET bucket_name = 'test' WHERE id = ${id};`, function (err, result) {
+        // If an error occurred...
+        if (err) { 
+            console.log("Error in query: ", err); 
+            res.json({result: "fail"})}
+        else {
+            console.log(result.rows);
+            res.json({result: "success"})
+        }
+    })
+}
+
 module.exports = {
     getUserList: getUserList,
     renderBucket: renderBucket,
     removeItem: removeItem,
-    addItem: addItem
+    addItem: addItem,
+    updateItem: updateItem
 }

@@ -38,9 +38,6 @@ express()
 
     .post('/addItem', bucket.addItem)
 
+    .put('/editItem', bucket.updateItem)
+
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
-
-
-    // .all('*', function (req, res) {
-
-    // })
