@@ -12,8 +12,8 @@ const pool = new Pool({
 connectionString: connectionString
 });
 
-var login = require('./modules/login.js');
-var bucket = require('./modules/bucketList.js');
+var website = require('./modules/website.js');
+// var bucket = require('./modules/bucketList.js');
 
 express()
     .use(express.static(__dirname + '/public'))
@@ -24,20 +24,6 @@ express()
 
     .set('view engine', 'ejs')
 
-    .get('/login', login.loginUser)
-
-    .post('/tryLogin', login.getUser)
-
-    .post('/signup', login.signUp)
-
-    .get('/bucketList', bucket.renderBucket)
-
-    .post('/getList', bucket.getUserList)
-
-    .post('/removeItem', bucket.removeItem)
-
-    .post('/addItem', bucket.addItem)
-
-    .put('/editItem', bucket.updateItem)
+    .all('*', website.renderIndex)
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
